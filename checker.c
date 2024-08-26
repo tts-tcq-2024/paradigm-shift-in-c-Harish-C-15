@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <assert.h>
-#include <iostream.h>
+#include <iostream>
 
 bool temperature_checker(float temperature)
 {
