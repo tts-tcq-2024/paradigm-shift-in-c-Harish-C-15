@@ -3,7 +3,7 @@
 
 using namespace std;
 
-bool checkTemperature(float temperature)
+bool temperature_checker(float temperature)
 {
   if(temperature < 0 || temperature > 45)
     {
@@ -13,7 +13,7 @@ bool checkTemperature(float temperature)
   return true;
 }
 
-bool checkSoc(float soc)
+bool soc_checker(float soc)
 {
   if(soc < 20 || soc > 80)
     {
@@ -23,7 +23,7 @@ bool checkSoc(float soc)
   return true;
 }
 
-bool checkCR(float CR)
+bool cr_checker(float CR)
 {
   if(CR > 0.8)
     {
@@ -35,7 +35,7 @@ bool checkCR(float CR)
 
 bool batteryIsOk(float temperature, float soc, float CR)
 {
-  return checkTemperature(temperature) && checkSoc(soc) && checkChargeRate(chargeRate);
+  return temperature_checker(temperature) && soc_checker(soc) && cr_checker(chargeRate);
 }
 
 int main() {
