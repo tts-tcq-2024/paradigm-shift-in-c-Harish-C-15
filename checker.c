@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <assert.h>
 
-using namespace std;
-
 bool temperature_checker(float temperature)
 {
   if(temperature < 0 || temperature > 45)
