@@ -3,11 +3,8 @@
 
 #include <stdbool.h>
 
-namespace abc
-{
   bool   temperature_checker(float temperature);
   bool soc_checker(float soc);
   bool cr_checker(float CR);
-}
 
 #endif
