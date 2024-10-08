@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "Param_Checker.h"
+#include "monitor_battery.h"
 
 void setParameterState(ParameterState *state, const char *errorMessage, const char *warningLow, const char *warningHigh) {
     state->errorMessage = errorMessage;
