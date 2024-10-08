@@ -1,6 +1,5 @@
 #include "Check_for_Limit.h"
-namespace abc
-{
+
   bool temperature_checker(float temperature)
   {
     if(temperature < 0 || temperature > 45)
@@ -29,5 +28,4 @@ bool cr_checker(float CR)
       return false;
     }
   return true;
-}
 }
