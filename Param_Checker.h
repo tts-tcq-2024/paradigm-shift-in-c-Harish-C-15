@@ -1,5 +1,5 @@
-#ifndef VALUES_CHECKER_H
-#define VALUES_CHECKER_H
+#ifndef PARAM_CHECKER_H
+#define PARAM_CHECKER_H
 
 typedef struct {
     const char *errorMessage;
