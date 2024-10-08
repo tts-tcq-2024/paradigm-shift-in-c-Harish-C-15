@@ -1,3 +1,4 @@
+#include "Check_for_Limit.h"
 namespace vfc
 {
   bool temperature_checker(float temperature)
@@ -28,4 +29,5 @@ bool cr_checker(float CR)
       return false;
     }
   return true;
+}
 }
