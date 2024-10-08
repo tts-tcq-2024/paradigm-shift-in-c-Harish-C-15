@@ -1,4 +1,4 @@
-#include "Battery_Mon.h"
+#include "monitor_battery.h"
 #include "Values_Checker.h"
 
 void printMessage(const char *message)
@@ -13,11 +13,7 @@ void checkTemperature(float temperature, ParameterState *state)
                      "Warning: Approaching high temperature!");
     
     checkBounds(temperature, TEMPERATURE_MIN, TEMPERATURE_MAX, state->errorMessage);
-    
-    if (WARN_FOR_TEMPERATURE) 
-    {
-        checkWarnings(temperature, TEMPERATURE_MIN, TEMPERATURE_MAX, state);
-    }
+    checkWarnings(temperature, TEMPERATURE_MIN, TEMPERATURE_MAX, state);
 }
 
 void checkSoc(float soc, ParameterState *state) 
@@ -27,11 +23,7 @@ void checkSoc(float soc, ParameterState *state)
                      "Warning: Approaching charge-peak!");
     
     checkBounds(soc, SOC_MIN, SOC_MAX, state->errorMessage);
-    
-    if (WARN_FOR_SOC) 
-    {
-        checkWarnings(soc, SOC_MIN, SOC_MAX, state);
-    }
+     checkWarnings(soc, SOC_MIN, SOC_MAX, state);
 }
 
 void checkChargeRate(float chargeRate, ParameterState *state) 
@@ -41,9 +33,6 @@ void checkChargeRate(float chargeRate, ParameterState *state)
                      "Warning: Approaching charge rate peak!");
     
     checkBounds(chargeRate, 0, CHARGE_RATE_MAX, state->errorMessage);
+    handleWarningHigh(chargeRate, CHARGE_RATE_MAX, state);
     
-    if (WARN_FOR_CHARGE_RATE) 
-    {
-        handleWarningHigh(chargeRate, CHARGE_RATE_MAX, state);
-    }
 }
