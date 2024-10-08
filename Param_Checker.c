@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "Values_Checker.h"
+#include "Param_Checker.h"
 
 void setParameterState(ParameterState *state, const char *errorMessage, const char *warningLow, const char *warningHigh) {
     state->errorMessage = errorMessage;
