@@ -13,7 +13,7 @@ void checkTemperature(float temperature, ParameterState *state)
                      "Warning: Approaching high temperature!");
     
     checkBounds(temperature, TEMP_MIN, TEMP_MAX, state->errorMessage);
-    checkWarnings(temperature, TEMPERATURE_MIN, TEMPERATURE_MAX, state);
+    checkWarnings(temperature, TEMP_MIN, TEMP_MAX, state);
 }
 
 void checkSoc(float soc, ParameterState *state) 
@@ -33,6 +33,6 @@ void checkChargeRate(float chargeRate, ParameterState *state)
                      "Warning: Approaching charge rate peak!");
     
     checkBounds(chargeRate, 0, CR_MAX, state->errorMessage);
-    handleWarningHigh(chargeRate, CHARGE_RATE_MAX, state);
+    handleWarningHigh(chargeRate, CR_MAX, state);
     
 }
