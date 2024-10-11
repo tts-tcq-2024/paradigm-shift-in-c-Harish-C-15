@@ -10,8 +10,7 @@ void printMessage(const char *message) {
 
 // Consolidated function to handle parameter checks
 void checkParameter(float value, float min, float max, ParameterState *state,
-                    const char *errorMsg, const char *lowWarning, const char *highWarning,
-                    int checkHighWarningOnly = 0;) {
+                    const char *errorMsg, const char *lowWarning, const char *highWarning, int checkHighWarningOnly = 0) {
     // Set the parameter state with error and warning messages
     setParameterState(state, errorMsg, lowWarning, highWarning);
 
