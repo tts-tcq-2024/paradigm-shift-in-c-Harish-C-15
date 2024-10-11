@@ -12,9 +12,6 @@
 
 #define TOLERANCE_PERCENTAGE 0.05
 
-void checkParameter(float value, float min, float max, ParameterState *state,
-                    const char *errorMsg, const char *lowWarning, const char *highWarning, int checkHighWarningOnly = 0);
-
 void printMessage(const char *message);
 
 void checkTemperature(float temperature, ParameterState *state);
